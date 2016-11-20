@@ -1,0 +1,28 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default"  namespace="/" extends="struts-default">
+		<action name="guar" method="guar" class="com.sv.vista.AlumnosVista">
+			<result name="success" type="redirect">/alumnos.jsp</result>
+		</action>
+		<action name="modiAlum" method="modi" class="com.sv.vista.AlumnosVista">
+			<result name="success">/alumnos.jsp</result>
+		</action>
+		<action name="elimAlum" method="elim" class="com.sv.vista.AlumnosVista">
+			<result name="success" type="redirect">/alumnos.jsp</result>
+		</action>
+		<action name="guar" method="guar" class="com.sv.vista.UsuariosVista">
+			<result name="success" type="redirect">/usuarios.jsp</result>
+		</action>
+		<action name="modiAlum" method="modi" class="com.sv.vista.UsuariosVista">
+			<result name="success">/usuarios.jsp</result>
+		</action>
+		<action name="elimAlum" method="elim" class="com.sv.vista.UsuariosVista">
+			<result name="success" type="redirect">/usuarios.jsp</result>
+		</action>
+	</package>
+</struts>
